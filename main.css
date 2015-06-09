@@ -1,0 +1,36 @@
+body {
+  font-family: /* Futura, */ "Trebuchet MS", Arial, sans-serif;
+  margin: auto;
+  max-width: 40em;
+}
+
+h1 {margin-bottom: 0.1em;}
+h1, h2 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+h3 {
+  display: inline;
+  margin-right: 0.5em;
+}
+
+a {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  text-decoration: none;
+}
+a:hover {border-bottom: 1px solid;}
+
+.no-break {white-space: nowrap;}
+.inline-list {margin-left: 1em;}
+
+section.main {
+  margin-top: 2em;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+iframe {
+  margin-top: 1em;
+}
+
