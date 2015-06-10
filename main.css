@@ -1,6 +1,7 @@
 body {
   font-family: /* Futura, */ "Trebuchet MS", Arial, sans-serif;
   margin: auto;
+  padding: 1%;
   max-width: 40em;
 }
 
