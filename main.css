@@ -40,3 +40,8 @@ a:hover { border-bottom: 1px solid; }
 .no-break { white-space: nowrap; }
 .inline-list { margin-left: 0.8em; }
 /* }}} */
+
+@media (max-width: 24em) {
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.4em; }
+}
