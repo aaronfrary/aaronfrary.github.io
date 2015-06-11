@@ -12,9 +12,10 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="main.css">
 
-<!-- HTML5 shim for IE8 support of HTML5 elements -->
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
 <!-- YouTube Player -->
@@ -24,44 +25,50 @@
 
 <header>
   <h1 class="no-break">Aaron Graham-Horowitz</h1>
-</header>
 
-<nav>
   <a href="resume.pdf">
     <span class="fa fa-file-pdf-o"></span> resume</a>
   <a class="inline-list no-break" href="https://github.com/aaronsgh">
     <span class="fa fa-github"></span> github</a>
-</nav>
+</header>
 
-<section id="projects" class="main">
-  <h2>Selected Projects</h2>
+<section id="projects">
+  <header>
+    <h2>Selected Projects</h2>
+  </header>
 
-  <section id="wikigame">
-    <h3>Wikigame:</h3>
-    <span class="no-break">
-      <small>[work in progress]</small>
-      <a class="inline-list"
-         href="http://aaronsgh.github.io/wikigame">
-        <span class="fa fa-gamepad"></span> play</a>
-      <a class="inline-list"
-         href="https://github.com/aaronsgh/wikigame">
-        <span class="fa fa-code-fork"></span> source</a>
-    </span>
+  <article id="wikigame">
+    <header>
+      <h3>Wikigame:</h3>
+      <span class="no-break">
+        <small>[work in progress]</small>
+        <a class="inline-list"
+           href="http://aaronsgh.github.io/wikigame">
+          <span class="fa fa-gamepad"></span> play</a>
+        <a class="inline-list"
+           href="https://github.com/aaronsgh/wikigame">
+          <span class="fa fa-code-fork"></span> source</a>
+      </span>
+    </header>
+
     <p>
       Explore the pages of Wikipedia in a procedurally generated HTML5
       platformer. Currently features basic level generation and movement.
       More to come!
     </p>
-  </section>
+  </article>
 
-  <section id="bridges">
-    <h3>Bridges:</h3>
-    <span class="no-break">
-      <a href="https://github.com/aaronsgh/game-of-bridges/archive/download.zip">
-        <span class="fa fa-download"></span> download</a>
-      <a class="inline-list" href="https://github.com/aaronsgh/game-of-bridges">
-        <span class="fa fa-code-fork"></span> source</a>
-    </span>
+  <article id="bridges">
+    <header>
+      <h3>Bridges:</h3>
+      <span class="no-break">
+        <a href="https://github.com/aaronsgh/game-of-bridges/archive/download.zip">
+          <span class="fa fa-download"></span> download</a>
+        <a class="inline-list" href="https://github.com/aaronsgh/game-of-bridges">
+          <span class="fa fa-code-fork"></span> source</a>
+      </span>
+    </header>
+
     <p>
       Bridges, also known as "Hashi", is a logic puzzle game about connecting
       islands. I made this as an exercise when I was learning
@@ -69,61 +76,72 @@
       It includes a puzzle solver and a simple text format for adding custom
       puzzles.
     </p>
-  </section>
+  </article>
 
-  <section id="dice">
-    <h3>Dice:</h3>
-    <span class="no-break">
-      <a href="http://aaronsgh.github.io/dice-probability">
-        <span class="fa fa-bar-chart"></span> try it</a>
-      <a class="inline-list" href="https://github.com/aaronsgh/dice-probability">
-        <span class="fa fa-code-fork"></span> source</a>
-    </span>
+  <article id="dice">
+    <header>
+      <h3>Dice:</h3>
+      <span class="no-break">
+        <a href="http://aaronsgh.github.io/dice-probability">
+          <span class="fa fa-bar-chart"></span> try it</a>
+        <a class="inline-list" href="https://github.com/aaronsgh/dice-probability">
+          <span class="fa fa-code-fork"></span> source</a>
+      </span>
+    </header>
+
     <p>
       Interactive graphing of the probability distribution for various types
       of die roll.
     </p>
-  </section>
+  </article>
 </section>
 
-<section id="teaching" class="main">
-  <h2>Teaching Videos</h2>
-  <p>
-    A few clips from the weekly section I taught for
-    <i>CS51: Abstraction and Design in Computation</i>
-    at Harvard in Spring 2014.
-  </p>
+<section id="teaching">
+  <header>
+    <h2>Teaching Videos</h2>
+    <p>
+      A few clips from the weekly section I taught for
+      <i>CS51: Abstraction and Design in Computation</i>
+      at Harvard in Spring 2014.
+    </p>
+  </header>
 
-  <section id="tailcalls">
-    <h3>Tail Calls:</h3>
-    <span class="no-break">
-      <a href="#tailcalls" onclick="showYouTube('tailcalls-video', 'awKtOxP_6NY')">
-        <span class="fa fa-youtube-play"></span> play here</a>
-      <a class="inline-list" target="_blank" href="https://www.youtube.com/v/awKtOxP_6NY">
-        <span class="fa fa-youtube"></span> YouTube</a>
-    </span>
+  <article id="tailcalls">
+    <header>
+      <h3>Tail Calls:</h3>
+      <span class="no-break">
+        <a href="#tailcalls" onclick="showYouTube('tailcalls-video', 'awKtOxP_6NY')">
+          <span class="fa fa-youtube-play"></span> play here</a>
+        <a class="inline-list" target="_blank" href="https://www.youtube.com/v/awKtOxP_6NY">
+          <span class="fa fa-youtube"></span> YouTube</a>
+      </span>
+    </header>
+
     <div id="tailcalls-video"></div>
     <p>
       A short lesson on tail recursion and the higher-order functions
       <code>fold_left</code> and <code>fold_right</code> in OCaml
       <span class="no-break">(10 minutes)</span>.
     </p>
-  </section>
+  </article>
 
-  <section id="mergesort">
-    <h3>Merge Sort:</h3>
-    <span class="no-break">
-      <a href="#mergesort" onclick="showYouTube('mergesort-video', 'GnW6ze9sqcA')">
-        <span class="fa fa-youtube-play"></span> play here</a>
-      <a class="inline-list" target="_blank" href="https://www.youtube.com/v/GnW6ze9sqcA">
-        <span class="fa fa-youtube"></span> YouTube</a>
-    </span>
+  <article id="mergesort">
+    <header>
+      <h3>Merge Sort:</h3>
+      <span class="no-break">
+        <a href="#mergesort" onclick="showYouTube('mergesort-video', 'GnW6ze9sqcA')">
+          <span class="fa fa-youtube-play"></span> play here</a>
+        <a class="inline-list" target="_blank" href="https://www.youtube.com/v/GnW6ze9sqcA">
+          <span class="fa fa-youtube"></span> YouTube</a>
+      </span>
+    </header>
+
     <div id="mergesort-video"></div>
     <p>
       Finding the asymptotic running time of the Merge Sort algorithm
       <span class="no-break">(5 minutes)</span>.
     </p>
-  </section>
+  </article>
 
 </section>
 

@@ -1,37 +1,42 @@
+/* Spacing {{{ */
+
 body {
-  font-family: /* Futura, */ "Trebuchet MS", Arial, sans-serif;
   margin: auto;
-  padding: 1%;
-  max-width: 640px;
+  padding: 1em 2%;
+  max-width: 40em;
 }
 
-h1 {margin-bottom: 2px;}
-h1, h2 {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
+/* Reset */
+h1, h2, p { margin: 0; }
+
+section { margin-top: 2em; }
+article { margin-top: 1.2em; }
+
+iframe { margin-top: 0.5em; }
+/* }}} */
+
+/* Styling {{{ */
+
+body   { font-family: /* Futura, */ "Trebuchet MS", Arial, sans-serif; }
+h1, h2 { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
+a      { font-family: Futura, "Trebuchet MS", Arial, sans-serif; }
+
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.1em; }
+
+h1 { letter-spacing: 0.04em; }
 h3 {
   display: inline;
-  margin-right: 8px;
+  margin-right: 0.5em;
 }
 
-a {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-  text-decoration: none;
-}
-a:hover {border-bottom: 1px solid;}
+a { text-decoration: none; }
+a:hover { border-bottom: 1px solid; }
+/* }}} */
 
-.no-break {white-space: nowrap;}
-.inline-list {margin-left: 12px;}
+/* Custom Classes {{{ */
 
-section.main {
-  margin-top: 32px;
-}
-
-p {
-  margin-bottom: 24px;
-}
-
-iframe {
-  margin-top: 16px;
-}
-
+.no-break { white-space: nowrap; }
+.inline-list { margin-left: 0.8em; }
+/* }}} */
