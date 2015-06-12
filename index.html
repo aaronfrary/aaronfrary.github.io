@@ -17,9 +17,6 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<!-- YouTube Player -->
-<script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <!-- }}} -->
 <body>
@@ -150,24 +147,27 @@
 <!-- }}} -->
 
 <!-- YouTube magic {{{ -->
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
-  videoPlayers = {};
+  window.videoPlayers = {};
   function showYouTube(name, video) {
+    var w = 0.96 * document.body.clientWidth;
+    var h = w * 9 / 16;
     videoPlayers[name] = new YT.Player(name + '-video', {
       videoId: video,
-      height: '390',
-      width: '640',
+      height: Math.round(h).toString(),
+      width: Math.round(w).toString(),
       events: {
         'onReady': function(e) {e.target.playVideo();}
       }
     });
-    btn = document.getElementById(name + '-btn');
+    var btn = document.getElementById(name + '-btn');
     btn.innerHTML = '<span class="fa fa-remove"></span> hide video';
     btn.onclick = function() {hideYouTube(name, video)};
   }
   function hideYouTube(name, video) {
-    videoPlayers[name].destroy();
-    btn = document.getElementById(name + '-btn');
+    window.videoPlayers[name].destroy();
+    var btn = document.getElementById(name + '-btn');
     btn.innerHTML = '<span class="fa fa-youtube-play"></span> play here';
     btn.onclick = function() {showYouTube(name, video)};
   }
