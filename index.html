@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <!-- {{{ -->
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,9 +21,10 @@
 <!-- YouTube Player -->
 <script src="https://www.youtube.com/iframe_api"></script>
 </head>
+<!-- }}} -->
 <body>
 
-<header>
+<header> <!-- {{{ -->
   <h1 class="no-break">Aaron Graham-Horowitz</h1>
 
   <a href="resume.pdf">
@@ -31,8 +32,9 @@
   <a class="inline-list no-break" href="https://github.com/aaronsgh">
     <span class="fa fa-github"></span> github</a>
 </header>
+<!-- }}} -->
 
-<section id="projects">
+<section id="projects"> <!-- {{{ -->
   <header>
     <h2>Selected Projects</h2>
   </header>
@@ -95,8 +97,9 @@
     </p>
   </article>
 </section>
+<!-- }}} -->
 
-<section id="teaching">
+<section id="teaching"> <!-- {{{ -->
   <header>
     <h2>Teaching Videos</h2>
     <p>
@@ -110,7 +113,7 @@
     <header>
       <h3>Tail Calls:</h3>
       <span class="no-break">
-        <a href="#tailcalls" onclick="showYouTube('tailcalls-video', 'awKtOxP_6NY')">
+        <a id="tailcalls-btn" href="#tailcalls" onclick="showYouTube('tailcalls', 'awKtOxP_6NY')">
           <span class="fa fa-youtube-play"></span> play here</a>
         <a class="inline-list" target="_blank" href="https://www.youtube.com/v/awKtOxP_6NY">
           <span class="fa fa-youtube"></span> YouTube</a>
@@ -129,7 +132,7 @@
     <header>
       <h3>Merge Sort:</h3>
       <span class="no-break">
-        <a href="#mergesort" onclick="showYouTube('mergesort-video', 'GnW6ze9sqcA')">
+        <a id="mergesort-btn" href="#mergesort" onclick="showYouTube('mergesort', 'GnW6ze9sqcA')">
           <span class="fa fa-youtube-play"></span> play here</a>
         <a class="inline-list" target="_blank" href="https://www.youtube.com/v/GnW6ze9sqcA">
           <span class="fa fa-youtube"></span> YouTube</a>
@@ -144,12 +147,13 @@
   </article>
 
 </section>
+<!-- }}} -->
 
-<!-- YouTube magic -->
+<!-- YouTube magic {{{ -->
 <script>
   videoPlayers = {};
   function showYouTube(name, video) {
-    videoPlayers[name] = new YT.Player(name, {
+    videoPlayers[name] = new YT.Player(name + '-video', {
       videoId: video,
       height: '390',
       width: '640',
@@ -157,7 +161,17 @@
         'onReady': function(e) {e.target.playVideo();}
       }
     });
+    btn = document.getElementById(name + '-btn');
+    btn.innerHTML = '<span class="fa fa-remove"></span> hide video';
+    btn.onclick = function() {hideYouTube(name, video)};
+  }
+  function hideYouTube(name, video) {
+    videoPlayers[name].destroy();
+    btn = document.getElementById(name + '-btn');
+    btn.innerHTML = '<span class="fa fa-youtube-play"></span> play here';
+    btn.onclick = function() {showYouTube(name, video)};
   }
 </script>
+<!-- }}} -->
 </body>
 </html>
