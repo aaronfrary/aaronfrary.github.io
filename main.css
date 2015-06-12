@@ -41,7 +41,11 @@ a:hover { border-bottom: 1px solid; }
 .inline-list { margin-left: 0.8em; }
 /* }}} */
 
+/* Shrink headers for small screens */
 @media (max-width: 24em) {
-  h1 { font-size: 1.6em; }
+  h1 {
+    font-size: 1.6em;
+    letter-spacing: 0;
+  }
   h2 { font-size: 1.4em; }
 }
