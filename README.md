@@ -1,3 +1,3 @@
-# aaronsgh.github.io
+# aaronfrary.github.io
 
 Not a blog.
